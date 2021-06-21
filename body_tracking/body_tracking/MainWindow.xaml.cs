@@ -36,9 +36,9 @@ namespace body_tracking
 
         /// Setup the limits (post processing)of the infrared data that we will render.
         /// Increasing or decreasing this value sets a brightness "wall" either closer or further away.
-        private const float InfraredOutputValueMinimum = 0.01f;
-        private const float InfraredOutputValueMaximum = 1.0f;
-        private const float InfraredSourceValueMaximum = ushort.MaxValue;
+        private float InfraredOutputValueMinimum = 0.01f;
+        private float InfraredOutputValueMaximum = 1.0f;
+        private float InfraredSourceValueMaximum = ushort.MaxValue;
         /// Scale of Infrared source data
         private const float InfraredSourceScale = 0.75f;
 
@@ -130,6 +130,11 @@ namespace body_tracking
 
             // unlock the bitmap
             this.bitmap.Unlock();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -18,5 +18,8 @@
         <Viewbox Grid.Row="1" HorizontalAlignment="Center">
             <Image Source="{Binding ImageSource}" Stretch="UniformToFill" />
         </Viewbox>
+        <Button Content="+" HorizontalAlignment="Left" Height="18" Margin="442,4,0,0" VerticalAlignment="Top" Width="26" Click="Button_Click"/>
+        <Label Content="IrOVMax" HorizontalAlignment="Left" Margin="386,0,0,0" VerticalAlignment="Top" Grid.RowSpan="2"/>
+        <Button Content="-" HorizontalAlignment="Left" Height="18" Margin="360,3,0,0" VerticalAlignment="Top" Width="26" Click="Button_Click"/>
     </Grid>
 </Window>
