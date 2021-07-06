@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:body_tracking"
         mc:Ignorable="d"
-        Title="MainWindow" Height="492" Width="800">
-    <Grid Margin="10,0,10,45">
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="10 0 10 0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
@@ -14,12 +14,9 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <TextBlock x:Name="Serial" Grid.Row="0" Margin="0 0 -1 0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="Consolas" FontSize="18" Text="Tutorial 04: Controls"/>
+        <TextBlock x:Name="Serial" Grid.Row="0" Margin="0 0 -1 0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="Consolas" FontSize="18" Text="Tutorial 03: Color view"/>
         <Viewbox Grid.Row="1" HorizontalAlignment="Center">
-            <Image x:Name="FrameDisplayImage" Stretch="UniformToFill" />
+            <Image Source="{Binding ImageSource}" Stretch="UniformToFill" />
         </Viewbox>
-        <Button Content="Infrared" Height="28" Margin="150,10,520,-38" Grid.Row="3" VerticalAlignment="Top" Click="Button_Infrared"/>
-        <Button Content="Color" HorizontalAlignment="Left" Height="28" Margin="343,10,0,-38" Grid.Row="3" VerticalAlignment="Top" Width="103" Click="Button_Color"/>
-        <Button Content="Depth" Height="28" Margin="520,10,150,-38" Grid.Row="3" VerticalAlignment="Top" Click="Button_Depth"/>
     </Grid>
 </Window>
