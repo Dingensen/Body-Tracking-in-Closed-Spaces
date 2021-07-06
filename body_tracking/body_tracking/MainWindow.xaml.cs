@@ -68,16 +68,16 @@ namespace body_tracking
             1. get FrameDescription
             2. create the bitmap to display
              */
-            SetupCurrentDisplay(DEFAULT_DISPLAYFRAMETYPE);
 
-   
-            // one sensor is currently supported
+            // init sensor
             this.kinectSensor = KinectSensor.GetDefault();
 
             // open the reader for the  frames, this time it is a global object with 3 options: Infrared, Color and Depth
             this.multiSourceFrameReader = this.kinectSensor.OpenMultiSourceFrameReader(FrameSourceTypes.Infrared | FrameSourceTypes.Color | FrameSourceTypes.Depth);
             //HAndler for frame arrival according to the frame source - defined method
-            //this.multiSourceFrameReader.MultiSourceFrameArrived += this.Reader_MultiSourceFrameArrived;
+            this.multiSourceFrameReader.MultiSourceFrameArrived += this.Reader_MultiSourceFrameArrived;
+
+            SetupCurrentDisplay(DEFAULT_DISPLAYFRAMETYPE);
 
             // use the window object as the view model in this simple example
             this.DataContext = this;
@@ -244,7 +244,7 @@ namespace body_tracking
         /// <param name="sender">object sending the event</param>
         /// <param name="e">event arguments</param>
         /// 
-        private void Reader_MultiSOurceFrameArrived(object sender, MultiSourceFrameArrivedEventArgs e)
+        private void Reader_MultiSourceFrameArrived(object sender, MultiSourceFrameArrivedEventArgs e)
         {
             MultiSourceFrame multiSourceFrame = e.FrameReference.AcquireFrame();
 
