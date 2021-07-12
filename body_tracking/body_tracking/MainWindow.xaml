@@ -14,12 +14,13 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <TextBlock x:Name="Serial" Grid.Row="0" Margin="0 0 -1 0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="Consolas" FontSize="18" Text="Tutorial 04: Controls"/>
+        <TextBlock x:Name="Serial" Grid.Row="0" Margin="0 0 -1 0" HorizontalAlignment="Left" VerticalAlignment="Bottom" FontFamily="Consolas" FontSize="18" Text="Tutorial 05: Skeleton View"/>
         <Viewbox Grid.Row="1" HorizontalAlignment="Center">
             <Image x:Name="FrameDisplayImage" Stretch="UniformToFill" />
         </Viewbox>
-        <Button Content="Infrared" Height="28" Margin="150,10,520,-38" Grid.Row="3" VerticalAlignment="Top" Click="Button_Infrared"/>
-        <Button Content="Color" HorizontalAlignment="Left" Height="28" Margin="343,10,0,-38" Grid.Row="3" VerticalAlignment="Top" Width="103" Click="Button_Color"/>
-        <Button Content="Depth" Height="28" Margin="520,10,150,-38" Grid.Row="3" VerticalAlignment="Top" Click="Button_Depth"/>
+        <Button Content="Infrared" HorizontalAlignment="Center"  Width="100" Height="28" Margin="120,10,552,-38" Grid.Row="3" VerticalAlignment="Top" Click="Button_Infrared"/>
+        <Button Content="Color" HorizontalAlignment="Center"  Width="100" Height="28" Margin="240,10,432,-38" Grid.Row="3" VerticalAlignment="Top" Click="Button_Color"/>
+        <Button Content="Depth" HorizontalAlignment="Center"  Width="100" Height="28" Margin="360,10,312,-38" Grid.Row="3" VerticalAlignment="Top" Click="Button_Depth"/>
+        <Button Content="Skeleton View" HorizontalAlignment="Center"  Width="100" Height="28" Margin="489,10,183,-38" Grid.Row="3" VerticalAlignment="Top" Click="Button_Body"/>
     </Grid>
 </Window>
